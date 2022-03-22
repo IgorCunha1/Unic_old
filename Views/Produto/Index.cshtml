@@ -1,0 +1,124 @@
+﻿@{
+    ViewData["Title"] = "Produto";
+}
+<style>
+
+    #tblProdutos {
+        text-align: center;
+    }
+</style>
+
+<div ng-app="Unic">
+    <div ng-controller="ProdutoController">
+
+        <div class="row">
+            <div class="col-sm-8" style="align-items: left;">
+                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalProduto" ng-click="exibirNovoProduto()">
+                     Novo <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalProduto" role="dialog" tabindex="-1" aria-labelledby="areaProduto" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title" id="areaProduto"> Novo Produto</div>
+                    </div>  
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label class="control-label">Id: </label>
+                                    <input type="text" class="form-control" ng-model="Id" disabled />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Descricao: </label>
+                                    <input type="text" class="form-control" ng-model="Descricao" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Preço Compra: </label>
+                                    <input type="number" class="form-control" ng-model="PrecoCompra" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Preço Venda: </label>
+                                    <input type="number" class="form-control" ng-model="PrecoVenda" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Estoque: </label>
+                                    <input type="number" class="form-control" ng-model="Estoque" />
+                                </div>
+                            </div>
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-4">
+                                <button type="submit" class="form-control btn btn-primary" ng-click="SalvarProduto()" id="botaoSalvar" style="display: block; align-items: center;">Salvar</button>
+                                <button type="submit" class="form-control btn btn-primary" ng-click="EditarProduto()" id="botaoEditar" style="display: none; align-items: center;">Editar</button>
+                            </div>
+                            <div class="col-sm-4">
+                                <button class="form-control btn btn-primary" ng-click="LimparCampos()"> Limpar Campos </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+         </div>
+        </div>
+
+<hr>
+<div ng-init="ListarProdutos()">
+    <table cellpadding="12" class="table table-bordered table-hover" id="tblProdutos">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Descricao</th>
+                <th>Preco Compra</th>
+                <th>Preco Venda</th>
+                <th>Estoque</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="pr in produtos">
+                <td>{{pr.id}}</td>
+                <td>{{pr.descricao}}</td>
+                <td>{{pr.precoCompra}}</td>
+                <td>{{pr.precoVenda}}</td>
+                <td>{{pr.estoque}}</td>
+                <td>
+                    <button type="submit" class="btn btn-danger" ng-click="DeletarProduto(pr.id)">
+                        Deletar <i class="fa-solid fa-trash-can-plus"></i>
+                    </button>
+                    <button type="submit" class="btn btn-primary" ng-click="SelecionarProduto(pr.id)" type="button" data-toggle="modal"  data-target="#modalProduto">
+                        Alterar
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    </div>
+
+</div>
+@section scripts
+{
+    @{await Html.RenderPartialAsync("_AngularScriptsPartial");}
+
+    <script src="~/js/ProdutoController.js"></script>
+
+}
