@@ -13,9 +13,9 @@ namespace Unic.Controllers
 {
     public class ProdutoController : Controller
     {
-        private readonly MvcProdutoContext _context;
+        private readonly MvcUnicContext _context;
 
-        public ProdutoController(MvcProdutoContext context)
+        public ProdutoController(MvcUnicContext context)
         {
             _context = context;
         }
@@ -51,30 +51,22 @@ namespace Unic.Controllers
             return View(produto);
         }
 
-        // GET: Produto/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
        [HttpPost]
-       public async Task<Produto> SalvarProduto([FromBody]Produto produto)
+       public async Task SalvarProduto([FromBody]Produto produto)
         {
-            if (ModelState.IsValid)
-            {
+
                 try 
                 { 
                     produto.DataCriacao = DateTime.Now;
                     _context.Add(produto);
                     await _context.SaveChangesAsync();
-                    return produto;
+
                 }
                 catch (Exception e)
                 {
                    Json(e.Message);
                 }
-            }
-            return produto;
+
         }
 
         // GET: Produto/Edit/5

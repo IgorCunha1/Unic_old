@@ -40,25 +40,26 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label class="control-label">Descricao: </label>
-                                    <input type="text" class="form-control" ng-model="Descricao" />
+                                    <input type="text" class="form-control" ng-model="Descricao" required />
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label class="control-label">Preço Compra: </label>
-                                    <input type="number" class="form-control" ng-model="PrecoCompra" />
+                                    <input type="number" class="form-control" ng-model="PrecoCompra" required />
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label class="control-label">Preço Venda: </label>
-                                    <input type="number" class="form-control" ng-model="PrecoVenda" />
+                                    <input type="number" class="form-control money" ng-model="PrecoVenda" required />
+                                    <div class="alert-description">{{mensagem}}</div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label class="control-label">Estoque: </label>
-                                    <input type="number" class="form-control" ng-model="Estoque" />
+                                    <input type="number" class="form-control" ng-model="Estoque" required />
                                 </div>
                             </div>
                             <div class="col-sm-2"></div>
@@ -83,7 +84,7 @@
 <hr>
 <div ng-init="ListarProdutos()">
     <table cellpadding="12" class="table table-bordered table-hover" id="tblProdutos">
-        <thead>
+        <thead class="thead-dark">
             <tr>
                 <th>#</th>
                 <th>Descricao</th>
@@ -97,14 +98,14 @@
             <tr ng-repeat="pr in produtos">
                 <td>{{pr.id}}</td>
                 <td>{{pr.descricao}}</td>
-                <td>{{pr.precoCompra}}</td>
-                <td>{{pr.precoVenda}}</td>
-                <td>{{pr.estoque}}</td>
+                <td>{{pr.precoCompra | currency:'R$'}}</td>
+                <td>{{pr.precoVenda | currency:'R$'}}</td>
+                <td>{{pr.estoque }}</td>
                 <td>
                     <button type="submit" class="btn btn-danger" ng-click="DeletarProduto(pr.id)">
                         Deletar <i class="fa-solid fa-trash-can-plus"></i>
                     </button>
-                    <button type="submit" class="btn btn-primary" ng-click="SelecionarProduto(pr.id)" type="button" data-toggle="modal"  data-target="#modalProduto">
+                    <button type="submit" class="btn btn-primary" ng-click="SelecionarProduto(pr.id)" data-toggle="modal"  data-target="#modalProduto">
                         Alterar
                     </button>
                 </td>

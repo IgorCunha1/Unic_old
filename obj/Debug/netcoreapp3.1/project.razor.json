@@ -14437,6 +14437,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\igori\\source\\repos\\Unic\\Unic\\Views\\Pessoa\\Index.cshtml",
+      "TargetPath": "Views\\Pessoa\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\igori\\source\\repos\\Unic\\Unic\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"

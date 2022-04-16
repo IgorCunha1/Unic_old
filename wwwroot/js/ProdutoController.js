@@ -26,6 +26,9 @@ app.factory('serviceProduto', ['$http', function($http) {
 app.controller('ProdutoController', ['$scope','$http', 'serviceProduto', function ($scope, $http, serviceProduto) {
   
     
+    $scope.mensagem = 'Error Message';
+
+
     $scope.exibirSalvar = function(){
         document.getElementById('botaoSalvar').style.display = 'block';
         document.getElementById('botaoEditar').style.display ='none';
@@ -57,19 +60,14 @@ app.controller('ProdutoController', ['$scope','$http', 'serviceProduto', functio
         $scope.produto.estoque = $scope.Estoque;
 
         serviceProduto.salvarProduto($scope.produto).then(function (response){
-                console.log(response);
-                $scope.ListarProdutos();
-                $scope.Descricao = '';
-                $scope.PrecoCompra = '';
-                $scope.PrecoVenda = '';
-                $scope.Estoque = '';
-            
-        }, function(){
-            $scope.Descricao = '';
-            $scope.PrecoCompra = '';
-            $scope.PrecoVenda = '';
-            $scope.Estoque = '';
-            
+                    $scope.ListarProdutos();
+                    $scope.Descricao = '';
+                    $scope.PrecoCompra = '';
+                    $scope.PrecoVenda = '';
+                    $scope.Estoque = '';
+
+        }).catch(function(){
+            alert('error');
         });       
     };
 
@@ -120,10 +118,5 @@ app.controller('ProdutoController', ['$scope','$http', 'serviceProduto', functio
                 $scope.Estoque = '';
         });
     }
-/**
-    $('#modalProduto').on('show.bs.modal', function(event){
-        var btn = $(event.relatedTarget)
-        var recipient = btn.data('relatedTarget');
-    })
- */
+
 }]);

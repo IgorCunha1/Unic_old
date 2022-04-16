@@ -7,13 +7,15 @@ using Unic.Models;
 
 namespace Unic.Data
 {
-    public class MvcProdutoContext : DbContext
+    public class MvcUnicContext : DbContext
     {
-        public MvcProdutoContext (DbContextOptions<MvcProdutoContext> options): base(options)
+        public MvcUnicContext (DbContextOptions<MvcUnicContext> options): base(options)
         {
 
         }
 
         public DbSet<Produto> Produto { get; set; }
+
+        public DbSet<Pessoa> Pessoa { get; set; }
     }
 }

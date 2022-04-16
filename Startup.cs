@@ -27,7 +27,7 @@ namespace Unic
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<MvcProdutoContext>(options =>
+            services.AddDbContext<MvcUnicContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("Unic")));
         }
 

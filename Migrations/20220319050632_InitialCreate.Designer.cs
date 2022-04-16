@@ -9,7 +9,7 @@ using Unic.Data;
 
 namespace Unic.Migrations
 {
-    [DbContext(typeof(MvcProdutoContext))]
+    [DbContext(typeof(MvcUnicContext))]
     [Migration("20220319050632_InitialCreate")]
     partial class InitialCreate
     {

@@ -8,7 +8,7 @@ using Unic.Data;
 
 namespace Unic.Migrations
 {
-    [DbContext(typeof(MvcProdutoContext))]
+    [DbContext(typeof(MvcUnicContext))]
     partial class MvcProdutoContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -18,6 +18,33 @@ namespace Unic.Migrations
                 .HasAnnotation("ProductVersion", "3.1.21")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Unic.Models.Pessoa", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Cpf")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Nascimento")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Pessoa");
+                });
 
             modelBuilder.Entity("Unic.Models.Produto", b =>
                 {
@@ -32,14 +59,14 @@ namespace Unic.Migrations
                     b.Property<string>("Descricao")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Estoque")
-                        .HasColumnType("float");
+                    b.Property<decimal>("Estoque")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<double>("PrecoCompra")
-                        .HasColumnType("float");
+                    b.Property<decimal>("PrecoCompra")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<double>("PrecoVenda")
-                        .HasColumnType("float");
+                    b.Property<decimal>("PrecoVenda")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
