@@ -10,13 +10,17 @@ namespace Unic.Models
     {
         public int Id { get; set; }
 
+        [Required (ErrorMessage = "Você precisa digita o seu Nome")]
         public string Nome { get; set; }
 
+        [Required (ErrorMessage = "Você precisa digita o seu CPF")]
+        [StringLength(11, MinimumLength = 11, ErrorMessage = "CPF Errado")]
         public string Cpf { get; set; }
 
-        
+        [Required (ErrorMessage = "Você precisa digita o seu Email")]
         public string Email{ get; set; }
 
+        [Required (ErrorMessage = "Você precisa digita seu Nascimento")]
         [DataType(DataType.Date)]
         public DateTime Nascimento { get; set; }
 

@@ -23,6 +23,18 @@ app.factory('servicePessoa', ['$http', function($http){
 
 app.controller('PessoaController', ['$scope','$http', 'servicePessoa', function ($scope, $http, servicePessoa){
 
+    $scope.EditarPessoa = function () {
+        $scope.pessoa = {};
+        $scope.pessoa.Nome = $scope.Nome;
+        $scope.pessoa.Email = $scope.Email;
+        $scope.pessoa.Nascimento = $scope.Nascimento;
+        $scope.pessoa.Cpf = $scope.Cpf;
+
+        servicePessoa.EditarPessoa($scope.pessoa).then(function (response) {
+            console.log(response);
+        });
+    }
+
     $scope.SelecionarPessoa = function (id) {
         $scope.pessoa = {};
         servicePessoa.SelecionarPessoa(id).then(function (response) {

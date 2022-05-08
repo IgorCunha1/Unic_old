@@ -14,6 +14,9 @@
           "AngularJS.Core": "1.8.2"
         }
       },
+      "jQuery.InputMask/5.0.7": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -3473,6 +3476,24 @@
         "content/Scripts/angular-route.js",
         "content/Scripts/angular-route.min.js",
         "content/Scripts/angular-route.min.js.map"
+      ]
+    },
+    "jQuery.InputMask/5.0.7": {
+      "sha512": "9vRacbpyZG0zMzn0EMTrOetME2P3sopf2SkA94RxSz3gIUjBS0i6MJLkqncP25eiq8mKKIePmOC8m+PVJUp4Mg==",
+      "type": "package",
+      "path": "jquery.inputmask/5.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.txt",
+        "content/Scripts/inputmask/bindings/inputmask.binding.js",
+        "content/Scripts/inputmask/inputmask.es6.js",
+        "content/Scripts/inputmask/inputmask.js",
+        "content/Scripts/inputmask/inputmask.min.js",
+        "content/Scripts/inputmask/jquery.inputmask.js",
+        "content/Scripts/inputmask/jquery.inputmask.min.js",
+        "jquery.inputmask.5.0.7.nupkg.sha512",
+        "jquery.inputmask.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -9386,7 +9407,8 @@
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.21",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
       "Scripts >= 1.0.0",
-      "angularjs >= 1.8.2"
+      "angularjs >= 1.8.2",
+      "jQuery.InputMask >= 5.0.7"
     ]
   },
   "packageFolders": {
@@ -9464,6 +9486,10 @@
           "angularjs": {
             "target": "Package",
             "version": "[1.8.2, )"
+          },
+          "jQuery.InputMask": {
+            "target": "Package",
+            "version": "[5.0.7, )"
           }
         },
         "imports": [

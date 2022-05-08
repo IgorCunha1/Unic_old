@@ -1,7 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Pessoa";
+    
 }
-
+@model Pessoa;
 <div ng-app="Unic">
     <div ng-controller="PessoaController">
 
@@ -34,13 +35,21 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label class="control-label">Nome: </label>
-                                    <input type="text" class="form-control" ng-model="Nome" />
+                                    <input type="text" class="form-control" ng-model="Nome" 
+                                    />
+                                    <span asp-validation-for="Nome">Error</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label class="control-label" id="Cpf">CPF: </label>
-                                    <input type="text" id="cpfMask" class="form-control" ng-model="Cpf" ui-br-cpf-mask/>
+                                    <input type="text" 
+                                    pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})"
+                                    class="form-control"
+                                    placeholder="000.000.000-00"
+                                    ng-model="Cpf"
+                                    required/>
+                                    <span asp-validation-for="Cpf" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-sm-6">

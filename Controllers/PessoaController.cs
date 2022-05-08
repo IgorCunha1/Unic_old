@@ -55,10 +55,13 @@ namespace Unic.Controllers
         {
             try
             {
-                pessoa.DataCriacao = DateTime.Now;
-                _context.Add(pessoa);
-                await _context.SaveChangesAsync();
-               
+                if(ModelState.IsValid){
+                    pessoa.DataCriacao = DateTime.Now;
+                    _context.Add(pessoa);
+                    await _context.SaveChangesAsync();
+               }else{
+                  
+               }
             }
             catch(Exception e)
             {

@@ -74,6 +74,10 @@
             "angularjs": {
               "target": "Package",
               "version": "[1.8.2, )"
+            },
+            "jQuery.InputMask": {
+              "target": "Package",
+              "version": "[5.0.7, )"
             }
           },
           "imports": [

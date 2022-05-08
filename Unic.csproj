@@ -8,6 +8,7 @@
   <ItemGroup>
     <PackageReference Include="angularjs" Version="1.8.2" />
     <PackageReference Include="AngularJS.Route" Version="1.8.2" />
+    <PackageReference Include="jQuery.InputMask" Version="5.0.7" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.21" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21">
