@@ -38,6 +38,9 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.5",
           "Scripts": "1.0.0",
           "angularjs": "1.8.2",
+          "jQuery": "3.6.0",
+          "jQuery.InputMask": "5.0.7",
+          "jQuery.Validation": "1.19.3",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -319,6 +322,13 @@
       "AngularJS.Route/1.8.2": {
         "dependencies": {
           "AngularJS.Core": "1.8.2"
+        }
+      },
+      "jQuery/3.6.0": {},
+      "jQuery.InputMask/5.0.7": {},
+      "jQuery.Validation/1.19.3": {
+        "dependencies": {
+          "jQuery": "3.6.0"
         }
       },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -3908,6 +3918,27 @@
       "sha512": "sha512-h/CSlk2D4FFvGz5vvJeziSFBtodQ92ipfeqVsqK4i8Jq5MxEqOO35ebi9wK27FMD9vS1NS4MNseOPkp9jgVtsA==",
       "path": "angularjs.route/1.8.2",
       "hashPath": "angularjs.route.1.8.2.nupkg.sha512"
+    },
+    "jQuery/3.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sSzCTDWn15waSMjDrP21jjgG1j1pwISLaKiVCClwU4XGAmuZt+FScLkdyRvh9ppoIxAW/tJtJBYei+3CAwFQ7g==",
+      "path": "jquery/3.6.0",
+      "hashPath": "jquery.3.6.0.nupkg.sha512"
+    },
+    "jQuery.InputMask/5.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9vRacbpyZG0zMzn0EMTrOetME2P3sopf2SkA94RxSz3gIUjBS0i6MJLkqncP25eiq8mKKIePmOC8m+PVJUp4Mg==",
+      "path": "jquery.inputmask/5.0.7",
+      "hashPath": "jquery.inputmask.5.0.7.nupkg.sha512"
+    },
+    "jQuery.Validation/1.19.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y9oA2cqUyuJYd+egyp/2VwsUT4mH1X31R7i74VTm1i/7XhnSK0iAWsPvQBXxXz6BhOnEDhAQ0u12Aj830/e1YA==",
+      "path": "jquery.validation/1.19.3",
+      "hashPath": "jquery.validation.1.19.3.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "type": "package",

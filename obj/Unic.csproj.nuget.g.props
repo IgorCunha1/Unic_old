@@ -24,5 +24,6 @@
     <PkgScripts Condition=" '$(PkgScripts)' == '' ">C:\Users\igori\.nuget\packages\scripts\1.0.0</PkgScripts>
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\igori\.nuget\packages\microsoft.codeanalysis.analyzers\2.9.4</PkgMicrosoft_CodeAnalysis_Analyzers>
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\igori\.nuget\packages\microsoft.entityframeworkcore.tools\3.1.21</PkgMicrosoft_EntityFrameworkCore_Tools>
+    <PkgjQuery Condition=" '$(PkgjQuery)' == '' ">C:\Users\igori\.nuget\packages\jquery\3.6.0</PkgjQuery>
   </PropertyGroup>
 </Project>

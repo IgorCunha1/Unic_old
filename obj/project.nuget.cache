@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Z056NyvQ9S43VPoVG4XdXg6s2RkEjusbeYJua4r/kq0AYU1dg8+QftFD9LOVS8pS3rlWcUrLZI0c9VFcrvPD5A==",
+  "dgSpecHash": "p2sTbO/6iPA7CIkpf+WWuHJlvAQYnRXOoKdc0m8TxHRSLMCOJJ5VbDEe50ojYrunBBwjbnTk+Q44rCySehyuWw==",
   "success": true,
   "projectFilePath": "C:\\Users\\igori\\source\\repos\\Unic\\Unic\\Unic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\igori\\.nuget\\packages\\angularjs\\1.8.2\\angularjs.1.8.2.nupkg.sha512",
     "C:\\Users\\igori\\.nuget\\packages\\angularjs.core\\1.8.2\\angularjs.core.1.8.2.nupkg.sha512",
     "C:\\Users\\igori\\.nuget\\packages\\angularjs.route\\1.8.2\\angularjs.route.1.8.2.nupkg.sha512",
+    "C:\\Users\\igori\\.nuget\\packages\\jquery\\3.6.0\\jquery.3.6.0.nupkg.sha512",
     "C:\\Users\\igori\\.nuget\\packages\\jquery.inputmask\\5.0.7\\jquery.inputmask.5.0.7.nupkg.sha512",
+    "C:\\Users\\igori\\.nuget\\packages\\jquery.validation\\1.19.3\\jquery.validation.1.19.3.nupkg.sha512",
     "C:\\Users\\igori\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\igori\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.1.10\\microsoft.aspnetcore.mvc.razor.extensions.3.1.10.nupkg.sha512",
     "C:\\Users\\igori\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\3.1.10\\microsoft.aspnetcore.mvc.razor.runtimecompilation.3.1.10.nupkg.sha512",

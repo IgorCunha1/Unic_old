@@ -1,6 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Pessoa";
-    
+
 }
 @model Pessoa;
 <div ng-app="Unic">
@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-sm-8" style="align-items: left;">
                 <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalPessoa">
-                     Novo <span class="glyphicon glyphicon-search"></span>
+                    Novo <span class="glyphicon glyphicon-search"></span>
                 </button>
             </div>
         </div>
@@ -19,102 +19,102 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <div class="modal-title" id="areaPessoa"> Nova Pessoa</div>
-                    </div>  
-            <div class="modal-body">
-                <form class="form-horizontal">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="form-group">
-                                    <label class="control-label">Id: </label>
-                                    <input type="text" class="form-control" ng-model="Id" disabled />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="control-label">Nome: </label>
-                                    <input type="text" class="form-control" ng-model="Nome" 
-                                    />
-                                    <span asp-validation-for="Nome">Error</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="control-label" id="Cpf">CPF: </label>
-                                    <input type="text" 
-                                    pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})"
-                                    class="form-control"
-                                    placeholder="000.000.000-00"
-                                    ng-model="Cpf"
-                                    required/>
-                                    <span asp-validation-for="Cpf" class="text-danger"></span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="control-label">Email: </label>
-                                    <input type="email" class="form-control" ng-model="Email" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="control-label">Nascimento: </label>
-                                    <input type="date" class="form-control" ng-model="Nascimento" />
-                                </div>
-                            </div>
-                            <div class="col-sm-2"></div>
-                            <div class="col-sm-4">
-                                <button type="submit" class="form-control btn btn-primary" ng-click="SalvarPessoa()" id="botaoSalvar" style="display: block; align-items: center;">Salvar</button>
-                                <button type="submit" class="form-control btn btn-primary" ng-click="EditarPessoa()" id="botaoEditar" style="display: none; align-items: center;">Editar</button>
-                            </div>
-                            <div class="col-sm-4">
-                                <button class="form-control btn btn-primary" ng-click="LimparCampos()"> Limpar Campos </button>
-                            </div>
-                        </div>
                     </div>
-                </form>
-            </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label class="control-label">Id: </label>
+                                            <input type="text" class="form-control" ng-model="Id" disabled />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Nome: </label>
+                                            <input type="text" class="form-control" ng-model="Nome" />
+                                            <span asp-validation-for="Nome"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label" id="Cpf">CPF: </label>
+                                            <input type="text"
+                                                   pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})"
+                                                   class="form-control"
+                                                   placeholder="000.000.000-00"
+                                                   ng-model="Cpf"
+                                                   id="cpf"
+                                                   required />
+                                            <span asp-validation-for="Cpf" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Email: </label>
+                                            <input type="email" class="form-control" ng-model="Email" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Nascimento: </label>
+                                            <input type="date" class="form-control" ng-model="Nascimento" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-sm-4">
+                                        <button type="submit" class="form-control btn btn-primary" ng-click="SalvarPessoa()" id="botaoSalvar" data-dismiss="modal" style="display: block; align-items: center;">Salvar</button>
+                                        <button type="submit" class="form-control btn btn-primary" ng-click="EditarPessoa()" id="botaoEditar" data-dismiss="modal" style="display: none; align-items: center;">Editar</button>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <button class="form-control btn btn-primary" ng-click="LimparCampos()"> Limpar Campos </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                    </div>
                 </div>
             </div>
-         </div>
         </div>
 
-<hr>
-<div ng-init="ListarPessoas()">
-    <table cellpadding="12" class="table table-bordered table-hover" id="tblPessoas">
-        <thead class="thead-dark">
-            <tr>
-                <th>#</th>
-                <th>Nome</th>
-                <th>CPF</th>
-                <th>Email</th>
-                <th>Nascimento</th>
-                <th>Ação</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="pe in Pessoas">
-                <td>{{pe.id}}</td>
-                <td>{{pe.nome}}</td>
-                <td>{{pe.cpf}}</td>
-                <td>{{pe.email}}</td>
-                <td>{{pe.nascimento | date: "dd/MM/yyyy"}}</td>
-                <td>
-                    <button type="submit" class="btn btn-danger" ng-click="DeletarPessoa(pe.id)">
-                        Deletar <i class="fa-solid fa-trash-can-plus"></i>
-                    </button>
-                    <button type="submit" class="btn btn-primary" ng-click="SelecionarPessoa(pe.id)" data-toggle="modal"  data-target="#modalPessoa">
-                        Alterar
-                    </button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+        <hr>
+        <div ng-init="ListarPessoas()">
+            <table cellpadding="12" class="table table-bordered table-hover" id="tblPessoas">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Email</th>
+                        <th>Nascimento</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="pe in Pessoas">
+                        <td>{{pe.id}}</td>
+                        <td>{{pe.nome}}</td>
+                        <td>{{pe.cpf}}</td>
+                        <td>{{pe.email}}</td>
+                        <td>{{pe.nascimento | date: "dd/MM/yyyy"}}</td>
+                        <td>
+                            <button type="submit" class="btn btn-danger" ng-click="DeletarPessoa(pe.id)">
+                                Deletar <i class="fa-solid fa-trash-can-plus"></i>
+                            </button>
+                            <button type="submit" class="btn btn-primary" ng-click="SelecionarPessoa(pe.id)" data-toggle="modal" data-target="#modalPessoa">
+                                Alterar
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </div>
@@ -124,4 +124,6 @@
 
     <script src="~/js/PessoaController.js"></script>
 
+    <script src="~/js/site.js"></script>
 }
+

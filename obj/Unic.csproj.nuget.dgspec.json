@@ -75,9 +75,17 @@
               "target": "Package",
               "version": "[1.8.2, )"
             },
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.6.0, )"
+            },
             "jQuery.InputMask": {
               "target": "Package",
               "version": "[5.0.7, )"
+            },
+            "jQuery.Validation": {
+              "target": "Package",
+              "version": "[1.19.3, )"
             }
           },
           "imports": [

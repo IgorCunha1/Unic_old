@@ -109,7 +109,8 @@ app.controller('ProdutoController', ['$scope','$http', 'serviceProduto', functio
         $scope.produto.precoCompra = $scope.PrecoCompra;
         $scope.produto.precoVenda = $scope.PrecoVenda;
         $scope.produto.estoque = $scope.Estoque;
-        serviceProduto.editarProduto($scope.produto).then(function(response){
+
+        serviceProduto.editarProduto($scope.produto).then(function (response) {
                 $scope.ListarProdutos();
                 $scope.Id = '';
                 $scope.Descricao = '';

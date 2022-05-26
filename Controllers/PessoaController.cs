@@ -51,7 +51,7 @@ namespace Unic.Controllers
 
 
         [HttpPost]
-        public async Task SalvarPessoa([FromBody] Pessoa pessoa)
+        public async Task<IActionResult> SalvarPessoa([FromBody] Pessoa pessoa)
         {
             try
             {
@@ -59,15 +59,17 @@ namespace Unic.Controllers
                     pessoa.DataCriacao = DateTime.Now;
                     _context.Add(pessoa);
                     await _context.SaveChangesAsync();
+                    return Json("Sucesso");
                }else{
-                  
+                    return Json("error");
                }
             }
             catch(Exception e)
             {
-                Json(e.Message);
+                return Json(e.Message);
             }
 
+            return View();
         }
 
         // GET: Pessoa/Edit/5
@@ -111,34 +113,14 @@ namespace Unic.Controllers
             }
             return Json(pessoa);
         }
-
-        // GET: Pessoa/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var pessoa = await _context.Pessoa
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (pessoa == null)
-            {
-                return NotFound();
-            }
-
-            return View(pessoa);
-        }
-
-        // POST: Pessoa/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        
+        [HttpPost]
+        public async Task DeleteConfirmed(int id)
         {
             var pessoa = await _context.Pessoa.FindAsync(id);
             _context.Pessoa.Remove(pessoa);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            
         }
 
         private bool PessoaExists(int id)
